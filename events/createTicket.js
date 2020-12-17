@@ -48,6 +48,10 @@ module.exports = async function (msg, emoji, reactor) {
 		]
 	});
 
+	if (ids.notification.channel) {
+		this.createMessage(ids.notification.channel, `${channel.mention}\nチケットが発行されました。対応お願いします。\n${ids.notification.mentions.map(m => `<@${m}>`).join(' ')}`);
+	}
+
 	const message = await channel.createMessage({
 		embed: {
 			author: {
