@@ -53,6 +53,7 @@ module.exports = async function (msg, emoji, reactor) {
 	}
 
 	const message = await channel.createMessage({
+		content: reactor.mention,
 		embed: {
 			author: {
 				name: reactor.username,

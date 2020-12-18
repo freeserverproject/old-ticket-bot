@@ -3,17 +3,17 @@ module.exports = {
 		'312508907002265600'
 	],
 	notification: {
-		channel: '432877058218131458',
+		channel: '789133511717289994',
 		mentions: [
-			'338963868539813890'
+			'706336533598175234'
 		]
 	},
-	archiveCategory: '789120854772547594',
-	privateChannelCategolyId: '789107780094918666',
+	archiveCategory: '789133677211942942',
+	privateChannelCategolyId: '789133129839411240',
 	createTicketMessage: [
 		{
-			channelID: '789107781293965392',
-			messageID: '789107782510444574'
+			channelID: '789133130945527819',
+			messageID: '789133132133171210'
 		}
 	]
 }

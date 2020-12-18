@@ -1,4 +1,5 @@
 const ids = require('../config/ids');
+const { Permissions, Per } = require('eris/lib/Constants');
 const Eris = require('eris');
 
 /**
@@ -12,9 +13,17 @@ module.exports = async function (msg) {
 		target => (target.channelID === channel.id)
 	)) return;
 
+	const member = channel.permissionOverwrites.find(perm => perm.type === 'member');
+
+	await channel.editPermission(member.id, 1024, Permissions.sendMessages, 'member');
+
 	await channel.createMessage('チケットがクローズされました。\n5秒後にアーカイブ化されます。');
 	
-	setTimeout(async () => await channel.edit({
-		parentID: ids.archiveCategory
-	}), 5000);
+	setTimeout(async () => {
+		await channel.edit({
+			parentID: ids.archiveCategory
+		});
+
+		await channel.editPermission(member.id, 0, Permissions.sendMessages, 'member');
+	}, 5000);
 }
