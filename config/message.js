@@ -3,6 +3,7 @@ module.exports = {
 		channelName: 'Support',
 		createTicketChannelName: 'create-ticket',
 		createTicketMsg: 'こちらからサポートを受けれます。\nそれぞれのリアクションを押してチケットを発行してください',
+		color: 5946042,
 		categories: [
 			{
 				emoji: '➕',

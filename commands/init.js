@@ -1,6 +1,7 @@
 const Eris = require('eris');
 const path = require('path');
 const { supportChannel } = require('../config/message');
+const generateDefaultMessageEmbed = require('../Utils/generateMessageEmbed');
 const { canRunCommandUsers } = require('../config/ids');
 
 const label = 'init';

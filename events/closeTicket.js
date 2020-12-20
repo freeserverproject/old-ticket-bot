@@ -1,5 +1,5 @@
 const ids = require('../config/ids');
-const { Permissions, Per } = require('eris/lib/Constants');
+const { Permissions } = require('eris/lib/Constants');
 const Eris = require('eris');
 
 /**
