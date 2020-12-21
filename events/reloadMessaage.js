@@ -17,7 +17,12 @@ module.exports = function (msg, emoji, reactor) {
 		target => (target.channelID === msg.channel.id && target.messageID === msg.id)
 	))	return;
 
-	(await this.getMessage(msg.channel.id, msg.id)).edit(generateDefaultMessageEmbed());
+	const message = await this.getMessage(msg.channel.id, msg.id)
+	await message.edit(generateDefaultMessageEmbed());
+	await message.removeReactions();
+	for (const category of supportChannel.categories) {
+		await message.addReaction(category.emoji);
+	}
 
 	await this.getDMChannel(reactor.id).createMessage('更新が完了しました');
 }
