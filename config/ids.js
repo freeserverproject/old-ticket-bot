@@ -5,7 +5,7 @@ module.exports = {
 	notification: {
 		channel: '789133511717289994',
 		mentions: [
-			'706336533598175234'
+			'&706336533598175234'
 		]
 	},
 	archiveCategory: '789133677211942942',
